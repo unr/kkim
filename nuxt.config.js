@@ -1,63 +1,63 @@
-import pkg from './package'
+const join = require('path').join;
+const tailwindJS = join(__dirname, 'tailwind.js');
+
+// Only purge the additional css in production, as this takes extra time.
+let purgecssConfig = false;
+if (process.env.NODE_ENV === 'production') {
+	purgecssConfig = {
+		// Specify the paths to all of the template files in your project
+		content: [
+			'./pages/**/*.vue',
+			'./layouts/**/*.vue',
+			'./components/**/*.vue'
+		],
+		// Include any special characters you're using in this regular expression
+		defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
+	};
+}
 
 export default {
-  mode: 'universal',
+	mode: 'universal',
 
-  /*
-  ** Headers of the page
-  */
-  head: {
-    title: pkg.name,
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
-  },
+	/*
+	 ** Headers of the page
+	 */
+	head: {
+		title: 'kkim',
+		meta: [
+			{ charset: 'utf-8' },
+			{
+				name: 'viewport',
+				content: 'width=device-width, initial-scale=1'
+			},
+			{
+				hid: 'description',
+				name: 'description',
+				content: 'comin soon yall'
+			}
+		],
+		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+	},
 
-  /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#fff' },
+	/*
+	 ** Customize the progress-bar color
+	 */
+	loading: { color: '#fff' },
 
-  /*
-  ** Global CSS
-  */
-  css: [
-    '~/assets/css/tailwind.css'
-  ],
+	/*
+	 ** Global CSS
+	 */
+	// css: ['~/assets/css/tailwind.css'],
 
-  /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [
-  ],
+	plugins: [],
 
-  /*
-  ** Nuxt.js modules
-  */
-  modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
-  ],
-  /*
-  ** Axios module configuration
-  */
-  axios: {
-    // See https://github.com/nuxt-community/axios-module#options
-  },
+	modules: [
+		// Doc: https://axios.nuxtjs.org/usage
+		'@nuxtjs/axios',
+		'@nuxtjs/tailwindcss'
+	],
 
-  /*
-  ** Build configuration
-  */
-  build: {
-    /*
-    ** You can extend webpack config here
-    */
-    extend(config, ctx) {
-    }
-  }
-}
+	axios: {
+		// See https://github.com/nuxt-community/axios-module#options
+	}
+};

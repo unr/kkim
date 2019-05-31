@@ -1,0 +1,55 @@
+/**
+ * Custom Rivalry Buttons
+ */
+
+/* use nav as example button import lol */
+.top-nav {
+	@apply bg-grey-lighter border-grey border-solid border px-4 py-4;
+}
+.nav-item {
+	@apply inline-block no-underline text-navy;
+	&:hover {
+		@apply underline text-navy-dark;
+	}
+}
+
+/**
+ * Basic Button
+ * A basic button is orange.
+ */
+.btn {
+	@apply inline-block py-3 px-6;
+	@apply bg-bloodorange rounded;
+	@apply text-sm text-white text-center font-medium uppercase tracking-wide;
+	min-width: 140px;
+	&:hover {
+		@apply cursor-pointer;
+		@apply bg-bloodorange-dark;
+	}
+
+	/* alternate button colors */
+	&.btn-navy {
+		@apply bg-navy;
+		&:hover {
+			@apply bg-navy-dark;
+		}
+	}
+	&.btn-navy-light {
+		@apply bg-navy-light;
+		&:hover {
+			@apply bg-navy;
+		}
+	}
+}
+
+/**
+ * Disabled Button
+ * turns any button gray/no click events
+ */
+.btn.btn-disabled {
+	@apply bg-grey-light;
+	@apply pointer-events-none;
+	&:hover {
+		@apply cursor-default;
+	}
+}
