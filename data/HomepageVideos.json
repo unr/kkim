@@ -1,0 +1,11 @@
+{
+	"videos": [
+		{
+			"name": "First Video",
+			"date": "2019-01-01",
+			"url": "https://youtube.com/something",
+			"thumbnail": "scribbles.jpg",
+			"length": "04:43"
+		}
+	]
+}
