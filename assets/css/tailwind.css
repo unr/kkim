@@ -3,10 +3,8 @@ this style taken from
 https://github.com/tailwindcss/tailwindcss/issues/45#issuecomment-449085020
 **/
 
-@import 'tailwindcss/preflight';
+@import 'tailwindcss/base';
 @import 'tailwindcss/components';
-/* replacing this with a plugin! buttons.js */
-/* @import './buttons.css'; */
 @import 'tailwindcss/utilities';
 
 html,
