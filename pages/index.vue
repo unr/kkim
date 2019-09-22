@@ -1,73 +1,91 @@
 <template>
-  <section class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        kkim
-      </h1>
-      <h2 class="subtitle">
-        My divine Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >GitHub</a>
-      </div>
-    </div>
-  </section>
+	<div class='container'>
+		<Logo/>
+		<h1 class='title'>kkim</h1>
+		<h2 class='subtitle'>My divine Nuxt.js project</h2>
+		<div class='text-overwatch'>OVERWATCH</div>
+		<a href='https://nuxtjs.org/' target='_blank' class='text-red'>Documentation</a>
+		<a href='https://github.com/nuxt/nuxt.js' target='_blank'>GitHub</a>
+
+		<div class='mt-12'>
+			<p>
+				<strong>button colors</strong>
+			</p>
+			<a
+				v-for='color in buttonColors'
+				:key='color'
+				:class='`btn-${color}`'
+				class='btn m-4'
+			>btn-{{ color }}-outline</a>
+		</div>
+		<div class='mt-12'>
+			<p>
+				<strong>outlined button colors</strong>
+			</p>
+			<a
+				v-for='color in buttonColors'
+				:key='color'
+				:class='`btn-${color}-outline`'
+				class='btn m-4'
+			>btn-{{ color }}-outline</a>
+		</div>
+		<div class='mt-4'>
+			<p>
+				<strong>button sizes</strong>
+			</p>
+			<a class='btn btn-bloodorange btn-sm m-4'>btn-sm</a>
+			<a class='btn btn-bloodorange m-4'>default</a>
+			<a class='btn btn-bloodorange btn-lg m-4'>btn-lg</a>
+		</div>
+
+		<div class='mt-12'>
+			<p>
+				<strong>gradients</strong>
+			</p>
+			<div
+				v-for='gradient in gradients'
+				:key='gradient'
+				:class='gradient'
+				class='w-32 h-32 rounded inline-block m-4 shadow'
+			/>
+		</div>
+	</div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Logo from '~/components/Logo.vue';
 
 export default {
-  components: {
-    Logo
-  }
-}
+	components: {
+		Logo
+	},
+	data() {
+		return {
+			buttonColors: [
+				'navy-light',
+				'navy',
+				'navy-dark',
+				'orange',
+				'bloodorange',
+				'bloodorange-dark',
+				'yellow',
+				'teal-light',
+				'teal'
+			],
+			gradients: [
+				'bg-gradient-navy',
+				'bg-gradient-orange',
+				'bg-gradient-grey',
+				'bg-gradient-csgo',
+				'bg-gradient-dota-2',
+				'bg-gradient-call-of-duty',
+				'bg-gradient-hearthstone',
+				'bg-gradient-league-of-legends',
+				'bg-gradient-overwatch',
+				'bg-gradient-starcraft',
+				'bg-gradient-rivalry'
+			]
+		};
+	}
+};
 </script>
-
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-  @apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
