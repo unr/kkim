@@ -4,6 +4,7 @@
 			<a href='/' class='logo'>
 				<img src='~/assets/images/kitb.svg' alt='Kit B Films' />
 			</a>
+			Hi kevin!
 		</div>
 		<Nuxt />
 		<div class='mt-8'>
