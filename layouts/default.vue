@@ -1,5 +1,5 @@
 <template>
-	<div class='container'>
+	<div class='container antialiased'>
 		<div class='py-4'>
 			<a href='/' class='logo'>
 				<img src='~/assets/images/kitb.svg' alt='Kit B Films' />
