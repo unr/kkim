@@ -2,6 +2,7 @@
 	"videos": [
 		{
 			"name": "First Video",
+			"slug": "first-video",
 			"date": "2019-01-01",
 			"url": "https://youtube.com/something",
 			"thumbnail": "scribbles.jpg",
@@ -9,6 +10,7 @@
 		},
 		{
 			"name": "Another video title",
+			"slug": "first-video",
 			"date": "2019-01-01",
 			"url": "https://youtube.com/something",
 			"thumbnail": "scribbles.jpg",
@@ -16,6 +18,7 @@
 		},
 		{
 			"name": "Some Awesome Video",
+			"slug": "first-video",
 			"date": "2019-01-01",
 			"url": "https://youtube.com/something",
 			"thumbnail": "scribbles.jpg",
@@ -23,6 +26,7 @@
 		},
 		{
 			"name": "Get It Video",
+			"slug": "first-video",
 			"date": "2019-01-01",
 			"url": "https://youtube.com/something",
 			"thumbnail": "scribbles.jpg",
@@ -30,6 +34,7 @@
 		},
 		{
 			"name": "First Video",
+			"slug": "first-video",
 			"date": "2019-01-01",
 			"url": "https://youtube.com/something",
 			"thumbnail": "scribbles.jpg",
@@ -37,6 +42,7 @@
 		},
 		{
 			"name": "First Video",
+			"slug": "first-video",
 			"date": "2019-01-01",
 			"url": "https://youtube.com/something",
 			"thumbnail": "scribbles.jpg",
@@ -44,6 +50,7 @@
 		},
 		{
 			"name": "First Video",
+			"slug": "first-video",
 			"date": "2019-01-01",
 			"url": "https://youtube.com/something",
 			"thumbnail": "scribbles.jpg",
@@ -51,6 +58,7 @@
 		},
 		{
 			"name": "First Video",
+			"slug": "first-video",
 			"date": "2019-01-01",
 			"url": "https://youtube.com/something",
 			"thumbnail": "scribbles.jpg",
@@ -58,6 +66,7 @@
 		},
 		{
 			"name": "First Video",
+			"slug": "first-video",
 			"date": "2019-01-01",
 			"url": "https://youtube.com/something",
 			"thumbnail": "scribbles.jpg",
@@ -65,6 +74,7 @@
 		},
 		{
 			"name": "First Video",
+			"slug": "first-video",
 			"date": "2019-01-01",
 			"url": "https://youtube.com/something",
 			"thumbnail": "scribbles.jpg",
@@ -72,6 +82,7 @@
 		},
 		{
 			"name": "First Video",
+			"slug": "first-video",
 			"date": "2019-01-01",
 			"url": "https://youtube.com/something",
 			"thumbnail": "scribbles.jpg",

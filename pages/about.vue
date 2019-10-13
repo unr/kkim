@@ -1,8 +1,11 @@
 <template>
 	<div class='center-container container'>
-		<h1 class='title'>about ur boi</h1>
-		<h2 class='subtitle'>he's the kkim mastah</h2>
-		<p>good at smash even tho he doesn't think so</p>
+		<h1>about ur boi KKIM</h1>
+		<h2>he's the film mastah</h2>
+		<p>Doesn't realize how good he is at smash.</p>
+		<p>
+			<strong>This page is a work in progress. Working bit by bit, I swear</strong>
+		</p>
 	</div>
 </template>
 

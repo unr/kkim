@@ -1,10 +1,10 @@
 <template>
 	<div class='container antialiased'>
-		<div class='py-4'>
-			<a href='/' class='logo'>
+		<div class='flex justify-between items-center py-4'>
+			<NuxtLink :to='"index"' class='logo'>
 				<img src='~/assets/images/kitb.svg' alt='Kit B Films' />
-			</a>
-			Hi kevin!
+			</NuxtLink>
+			<Navigation />
 		</div>
 		<Nuxt />
 		<div class='mt-8'>
@@ -12,3 +12,20 @@
 		</div>
 	</div>
 </template>
+
+<script>
+import Navigation from '~/components/Navigation';
+
+export default {
+	name: 'DefaultLayout',
+	components: {
+		Navigation
+	}
+};
+</script>
+
+<style lang="postcss">
+.logo {
+	display: inline-block;
+}
+</style>

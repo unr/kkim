@@ -1,6 +1,6 @@
 <template>
 	<div>
-		Gonna put video list in here?
+		<p>Brief description about kevin, what he's looking for, and some filler words to crush that SEO Metric.</p>
 		<VideoList :videos='videos' />
 	</div>
 </template>

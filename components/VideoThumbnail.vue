@@ -1,11 +1,10 @@
 <template>
-	<div class='video-thumbnail'>
+	<NuxtLink :to='`/video/${video.slug}`' class='video-thumbnail'>
 		<div
 			:style='style'
 			class='absolute inset-0 bg-cover bg-center flex items-center justify-center flex-col text-white text-center'
-			v-text='"▶"'
 		/>
-	</div>
+	</NuxtLink>
 </template>
 
 <script>
@@ -34,7 +33,7 @@ export default {
 
 <style lang="postcss">
 .video-thumbnail {
-	@apply relative;
+	@apply relative block;
 	font-size: 48px;
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 	color: transparent;
@@ -43,6 +42,21 @@ export default {
 		content: '';
 		width: 100%;
 		padding-top: 56.25%; /* 16:9 */
+	}
+	&::after {
+		@apply absolute inset-0;
+		background: rgba(0, 0, 0, 0.3) url('~assets/images/play.svg') no-repeat
+			center center;
+		content: '';
+		opacity: 0;
+		will-change: opacity;
+		transition: opacity 0.3s ease-in;
+	}
+	&:hover {
+		@apply cursor-pointer;
+		&::after {
+			opacity: 1;
+		}
 	}
 }
 

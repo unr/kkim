@@ -40,4 +40,14 @@ export default {
 		flex: 0 calc(50% - 1rem);
 	}
 }
+@media screen and (min-width: 800px) {
+	.video-list-item {
+		flex: 0 calc(33% - 1rem);
+	}
+}
+@media screen and (min-width: 1000px) {
+	.video-list-item {
+		flex: 0 calc(25% - 1rem);
+	}
+}
 </style>
