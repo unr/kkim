@@ -62,6 +62,15 @@
 			"url": "https://www.youtube.com/watch?v=5Hlrwq4vHpY",
 			"thumbnail": "scribbles.jpg",
 			"length": "03:02"
+		},
+		{
+			"slug": "kognitive",
+			"name": "Kognitive Marketing Onboarding Video Teaser",
+			"description": "Teaser onboarding video made for \"pump-up\" meeting at Kognitive Marketing. ",
+			"date": "2019-09-20",
+			"url": "https://www.youtube.com/watch?v=Ec8Ayefnr3A",
+			"thumbnail": "scribbles.jpg",
+			"length": "01:04"
 		}
 	]
 }
