@@ -59,5 +59,14 @@ export default {
 
 	axios: {
 		// See https://github.com/nuxt-community/axios-module#options
+	},
+
+	build: {
+		// enable stage 0 css functionality. This lets us basically write 'sass' in css
+		postcss: {
+			preset: {
+				stage: 0
+			}
+		}
 	}
 };

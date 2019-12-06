@@ -1,7 +1,7 @@
 <template>
 	<div class='container antialiased'>
 		<div class='flex justify-between items-center py-4'>
-			<NuxtLink :to='"index"' class='logo'>
+			<NuxtLink to='/' class='logo'>
 				<img src='~/assets/images/kitb.svg' alt='Kit B Films' />
 			</NuxtLink>
 			<Navigation />

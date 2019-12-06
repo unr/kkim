@@ -1,29 +1,166 @@
 <template>
-	<div class='embed-container'>
-		<iframe src='https://www.youtube.com/embed/05_3QHtVMKk' frameborder='0' allowfullscreen />
+	<div class='y-video' @click='clickHandler'>
+		<div class='y-video__inner' :style='styleObj'>
+			<template v-if='!isVideoLoaded'>
+				<picture>
+					<source
+						:srcset='
+              `https://i.ytimg.com/vi_webp/${id}/${previewImageSize}.webp`
+            '
+						type='image/webp'
+					/>
+					<img
+						class='y-video__media y-video__media--type--img'
+						:src='`https://i.ytimg.com/vi/${id}/${previewImageSize}.jpg`'
+						:alt='alt'
+					/>
+				</picture>
+				<button type='button' class='y-video__button' :aria-label='buttonLabel'>
+					<svg viewBox='0 0 68 48' version='1.1' width='100%' height='100%'>
+						<path
+							class='y-video__button-shape'
+							d='M66.5 7.7c-.8-2.9-2.5-5.4-5.4-6.2C55.8.1 34 0 34 0S12.2.1 6.9 1.6c-3 .7-4.6 3.2-5.4 6.1a89.6 89.6 0 0 0 0 32.5c.8 3 2.5 5.5 5.4 6.3C12.2 47.9 34 48 34 48s21.8-.1 27.1-1.6c3-.7 4.6-3.2 5.4-6.1C68 35 68 24 68 24s0-11-1.5-16.3z'
+						/>
+						<path class='y-video__button-icon' d='M45 24L27 14v20' />
+					</svg>
+				</button>
+			</template>
+			<iframe v-else :src='generateURL()' allowfullscreen allow='autoplay' class='y-video__media'></iframe>
+		</div>
 	</div>
 </template>
 
 <script>
+/**
+ * Creates a lazy vue embed.
+ * I stole this one from https://github.com/andrewvasilchuk/vue-lazy-youtube-video
+ * I removed sass as a dependancy.
+ */
 export default {
-	name: 'VideoEmbed',
+	name: 'VueLazyYoutubeVideo',
 	props: {
 		url: {
 			type: String,
-			required: true
+			required: true,
+			validator: value => {
+				return value.indexOf('https://www.youtube.com/watch?') !== 1;
+			}
+		},
+		alt: {
+			type: String,
+			default: 'Video alternative image'
+		},
+		buttonLabel: {
+			type: String,
+			default: 'Play video'
+		},
+		aspectRatio: {
+			type: String,
+			default: '16:9',
+			validator: value => {
+				const pattern = /^\d+:\d+$/;
+				return pattern.test(value);
+			}
+		},
+		previewImageSize: {
+			type: String,
+			default: 'maxresdefault',
+			validator: value =>
+				[
+					'default',
+					'mqdefault',
+					'sddefault',
+					'hqdefault',
+					'maxresdefault'
+				].indexOf(value) !== -1
+		}
+	},
+	data() {
+		return {
+			isVideoLoaded: false
+		};
+	},
+	computed: {
+		id() {
+			try {
+				const regExp = /^https:\/\/www\.youtube\.com\/watch\?v=(.+)$/;
+				return regExp.exec(this.url)[1];
+			} catch (err) {
+				throw 'Youtube url in wrong format. Must be written as https://wwww.youtube.com/watch?v=1234';
+				return 0;
+			}
+		},
+		styleObj() {
+			return {
+				paddingBottom: this.getPaddingBottom()
+			};
+		}
+	},
+	methods: {
+		generateURL() {
+			const query = '?rel=0&showinfo=0&autoplay=1';
+			return `https://www.youtube.com/embed/${this.id}${query}`;
+		},
+		clickHandler() {
+			this.isVideoLoaded = true;
+			this.$emit('videoLoaded');
+		},
+		getPaddingBottom() {
+			const [a, b] = this.aspectRatio.split(':');
+			return `${(b / a) * 100}%`;
 		}
 	}
 };
 </script>
 
-<style lang="postcss">
-.embed-container {
-	@apply relative h-0 overflow-hidden max-w-full;
-	padding-bottom: 56.25%;
+<style>
+.y-video {
+	background-color: #000;
+	cursor: pointer;
 }
-.embed-container iframe,
-.embed-container object,
-.embed-container embed {
-	@apply absolute top-0 left-0 w-full h-full;
+.y-video:hover .y-video__button-shape {
+	fill: red;
+	fill-opacity: 1;
+}
+.y-video__inner {
+	position: relative;
+}
+.y-video__embed,
+.y-video__media {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-width: 0;
+}
+.y-video__media--type--img {
+	object-fit: cover;
+}
+.y-video__button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-width: 0;
+	background-color: transparent;
+	width: 68px;
+	height: 48px;
+	padding: 0;
+	cursor: pointer;
+}
+.y-video__button:focus {
+	outline: 0;
+}
+.y-video__button-shape {
+	fill: #212121;
+	fill-opacity: 0.8;
+}
+.y-video__button-icon {
+	fill: #fff;
+}
+.y-video__button:focus .y-video__button-shape {
+	fill: red;
+	fill-opacity: 1;
 }
 </style>

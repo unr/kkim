@@ -1,92 +1,67 @@
 {
 	"videos": [
 		{
-			"name": "First Video",
-			"slug": "first-video",
-			"date": "2019-01-01",
-			"url": "https://youtube.com/something",
+			"slug": "scarborough-toyota",
+			"name": "Scarborough Toyota - May Red Tag Days",
+			"description": "Motion graphics commercial made for YouTube pre-rolls promoting the May Red Tag Days at Scarborough Toyota.",
+			"date": "2019-09-20",
+			"url": "https://www.youtube.com/watch?v=FM3EFlozeSM",
 			"thumbnail": "scribbles.jpg",
-			"length": "04:43"
+			"length": "00:20"
 		},
 		{
-			"name": "Another video title",
-			"slug": "first-video",
-			"date": "2019-01-01",
-			"url": "https://youtube.com/something",
+			"slug": "law-society-of-ontario",
+			"name": "Law Society of Ontario Promo",
+			"description": "Ten second promo for the Law Society of Ontario. Special attention to delivery formats was required as this promo played on a range of platforms including television networks like Bell, movie theatres like Cineplex, and billboards.",
+			"date": "2019-09-20",
+			"url": "https://www.youtube.com/watch?v=4dyScEJtbvo",
 			"thumbnail": "scribbles.jpg",
-			"length": "04:43"
+			"length": "00:10"
 		},
 		{
-			"name": "Some Awesome Video",
-			"slug": "first-video",
-			"date": "2019-01-01",
-			"url": "https://youtube.com/something",
+			"slug": "flixels-pivot-moment",
+			"name": "Startup Success Stories: Flixel’s Pivot Moment",
+			"description": "One of a series of videos for MaRS Discovery District revolving around startup success stories. This video features Flixel and how they were able to pivot to move forward.",
+			"date": "2019-10-26",
+			"url": "https://www.youtube.com/watch?v=U5jbsMsuJOc",
 			"thumbnail": "scribbles.jpg",
-			"length": "04:43"
+			"length": "02:03"
 		},
 		{
-			"name": "Get It Video",
-			"slug": "first-video",
-			"date": "2019-01-01",
-			"url": "https://youtube.com/something",
+			"slug": "ornge-charity-golf-tournament-2019",
+			"name": "Annual Ornge Charity Golf Tournament 2019 Highlight Video",
+			"description": "Highlight video of the Annual Ornge Charity Golf Tournament in 2019 featuring interviews from various individuals associated with Ornge and action shots of the day.",
+			"date": "2019-09-20",
+			"url": "https://www.youtube.com/watch?v=ixazL7z2WxE",
 			"thumbnail": "scribbles.jpg",
-			"length": "04:43"
+			"length": "02:14"
 		},
 		{
-			"name": "First Video",
-			"slug": "first-video",
-			"date": "2019-01-01",
-			"url": "https://youtube.com/something",
+			"slug": "chubb-step-ladder",
+			"name": "Chubb Step-Ladder Safety Training Video (English)",
+			"description": "Training video created for Chubb regarding step-ladder safety utilizing demonstrations and voice overs. English and French versions were created for the client. ",
+			"date": "2019-09-20",
+			"url": "https://www.youtube.com/watch?v=8TVl3r0eppk",
 			"thumbnail": "scribbles.jpg",
-			"length": "04:43"
+			"length": "03:16"
 		},
 		{
-			"name": "First Video",
-			"slug": "first-video",
-			"date": "2019-01-01",
-			"url": "https://youtube.com/something",
+			"slug": "reach",
+			"name": "REACH - The National Centre for Research on Education Access and Choice for New Orleans",
+			"description": "Overview video from a series of green screen talking heads promoting REACH - The National Center for Research on Education Access and Choice in New Orleans, USA. ",
+			"date": "2019-09-20",
+			"url": "https://www.youtube.com/watch?v=XPga47cJdow",
 			"thumbnail": "scribbles.jpg",
-			"length": "04:43"
+			"length": "01:15"
 		},
 		{
-			"name": "First Video",
-			"slug": "first-video",
-			"date": "2019-01-01",
-			"url": "https://youtube.com/something",
+			"slug": "gemsys",
+			"name": "Gemsys RSS Websafe Training Video (English)",
+			"description": "Training video created for Gemsys Money Handling Systems regarding using their new RSS Websafe system. English and French versions were created for the client. ",
+			"date": "2019-09-20",
+			"url": "https://www.youtube.com/watch?v=5Hlrwq4vHpY",
 			"thumbnail": "scribbles.jpg",
-			"length": "04:43"
-		},
-		{
-			"name": "First Video",
-			"slug": "first-video",
-			"date": "2019-01-01",
-			"url": "https://youtube.com/something",
-			"thumbnail": "scribbles.jpg",
-			"length": "04:43"
-		},
-		{
-			"name": "First Video",
-			"slug": "first-video",
-			"date": "2019-01-01",
-			"url": "https://youtube.com/something",
-			"thumbnail": "scribbles.jpg",
-			"length": "04:43"
-		},
-		{
-			"name": "First Video",
-			"slug": "first-video",
-			"date": "2019-01-01",
-			"url": "https://youtube.com/something",
-			"thumbnail": "scribbles.jpg",
-			"length": "04:43"
-		},
-		{
-			"name": "First Video",
-			"slug": "first-video",
-			"date": "2019-01-01",
-			"url": "https://youtube.com/something",
-			"thumbnail": "scribbles.jpg",
-			"length": "04:43"
+			"length": "03:02"
 		}
 	]
 }

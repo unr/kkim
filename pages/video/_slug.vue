@@ -11,6 +11,7 @@
 				{{ video.date }}
 			</span>
 		</span>
+		<p v-text='video.description' />
 
 		<VideoEmbed :url='video.url' />
 	</div>
@@ -18,7 +19,6 @@
 
 <script>
 import { videos } from '~/data/HomepageVideos';
-
 import VideoEmbed from '~/components/VideoEmbed';
 
 export default {
