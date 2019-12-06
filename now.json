@@ -1,0 +1,19 @@
+{
+	"name": "kkim",
+	"public": true,
+	"version": 2,
+	"github": { "silent": true },
+	"builds": [{ "src": "nuxt.config.js", "use": "@nuxtjs/now-builder" }],
+	"routes": [
+		{
+			"src": "/.nuxt/.+",
+			"headers": {
+				"cache-control": "s-maxage=31536000"
+			}
+		},
+		{
+			"src": "^/(.*)",
+			"dest": "/"
+		}
+	]
+}
